@@ -1,0 +1,34 @@
+v {xschem version=3.4.6 file_version=1.2}
+G {}
+K {type=opamp_va
+format="@spiceprefix@name @@IN @@OUT @model"
+
+template="name=U1 model=gain_block_cell spiceprefix=X"
+
+device_model="tcleval(
+.subckt gain_block_cell IN OUT
+N1 IN OUT gain_block_model
+.ends gain_block_cell
+
+.model gain_block_model gain_block
+
+.control
+* following line specifies the location for the .osdi file so ngspice can use it.
+pre_osdi /home/vincef/projects/ttsky25b_tinychaos/xsch/veriloga/gain_block.osdi
+.endc
+)"
+}
+V {}
+S {}
+E {}
+L 4 -100 0 -80 0 {}
+L 4 80 0 100 0 {}
+B 5 -102.5 -2.5 -97.5 2.5 {name=IN dir=in}
+B 5 97.5 -2.5 102.5 2.5 {name=OUT dir=out}
+P 4 4 -80 80 -80 -80 80 -0 -80 80 {}
+T {@symname} -64 -6 0 0 0.3 0.3 {}
+T {@name} 85 -22 0 0 0.2 0.2 {}
+T {IN} -75 -14 0 0 0.2 0.2 {}
+T {OUT} 65 -4 0 1 0.2 0.2 {}
+T {Ensure port order matches the
+order in the verilog-A file.} -30 -70 0 0 0.1 0.1 {hide=instance}

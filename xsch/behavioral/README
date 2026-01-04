@@ -1,0 +1,3 @@
+This directory is for behavioral circuit components.
+
+For example, a behavioral op-amp modeled with VCVS; for use in early-stage architecture and debug.

@@ -1,0 +1,10 @@
+`include "disciplines.vams"
+module gain_block(
+inout electrical in,
+inout electrical out);
+
+parameter real gain=1.0 ;
+
+analog
+	V(out) <+ V(in)*gain*transition(1, 10e-12, 10e-12);
+endmodule

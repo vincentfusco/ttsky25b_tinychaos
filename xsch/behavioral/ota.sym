@@ -1,0 +1,29 @@
+v {xschem version=3.4.6 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=X1 Ao=1000 VDD=1.8 VSAT=0.25 GBW=100e6 Rout_ol=100"
+}
+V {}
+S {}
+E {}
+L 4 40 0 60 0 {}
+L 4 -40 -40 -40 40 {}
+L 4 -60 -20 -40 -20 {}
+L 4 -60 20 -40 20 {}
+L 4 -40 40 40 -0 {}
+L 4 -40 -40 40 -0 {}
+L 4 0 20 0 40 {}
+L 4 -25 -25 -25 -15 {}
+L 4 -30 -20 -20 -20 {}
+L 4 -30 20 -20 20 {}
+B 5 -62.5 -22.5 -57.5 -17.5 {name=vinp dir=in}
+B 5 57.5 -2.5 62.5 2.5 {name=vout dir=out}
+B 5 -2.5 37.5 2.5 42.5 {name=vss dir=inout}
+B 5 -62.5 17.5 -57.5 22.5 {name=vinn dir=in}
+T {@symname} 38.5 14 0 0 0.3 0.3 {}
+T {@name} 25 -32 0 0 0.2 0.2 {}
+T {DC Gain = @Ao} -25 -82 0 0 0.2 0.2 {}
+T {GBW = @GBW} -25 -72 0 0 0.2 0.2 {}
+T {VDD = @VDD} -25 -62 0 0 0.2 0.2 {}
+T {VSAT = @VSAT} -25 -52 0 0 0.2 0.2 {}
