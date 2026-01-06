@@ -50,32 +50,12 @@ N 600 -440 600 -280 {lab=vx}
 N 200 -280 600 -280 {lab=vx}
 N -180 -460 200 -460 {lab=vy_n}
 N -180 -460 -180 80 {lab=vy_n}
-N -40 520 -40 540 {lab=vss}
-N -180 300 -140 300 {lab=vy_n}
-N -180 80 -180 300 {lab=vy_n}
 N 600 -60 600 160 {lab=vy_n}
 N -180 160 600 160 {lab=vy_n}
 N 200 80 280 80 {lab=vy_n}
 N 200 80 200 160 {lab=vy_n}
-N -500 140 -500 160 {lab=vss}
-N -700 -240 200 -240 {lab=vx}
-N -780 -240 -700 -240 {lab=vx}
-N -780 -240 -780 420 {lab=vx}
-N -780 420 -140 420 {lab=vx}
-N -640 -240 -640 -80 {lab=vx}
-N -640 80 -640 640 {lab=vz}
-N -640 640 -640 680 {lab=vz}
-N -640 680 580 680 {lab=vz}
 N 580 400 580 680 {lab=vz}
 N 180 460 180 680 {lab=vz}
-N -180 340 -140 340 {lab=vref}
-N -180 340 -180 460 {lab=vref}
-N -180 460 -140 460 {lab=vref}
-N -180 460 -180 480 {lab=vref}
-N -680 -40 -600 -40 {lab=vref}
-N -680 -40 -680 40 {lab=vref}
-N -680 40 -600 40 {lab=vref}
-N -680 40 -680 60 {lab=vref}
 N -1610 30 -1610 50 {lab=vss}
 N -1610 -70 -1610 -30 {lab=vref}
 N -1500 30 -1500 50 {lab=vss}
@@ -84,11 +64,7 @@ N -1450 -70 -1450 -40 {lab=GND}
 N -1500 -70 -1450 -70 {lab=GND}
 N -1720 30 -1720 50 {lab=vss}
 N -1720 -70 -1720 -30 {lab=vdd}
-N -610 80 -600 80 {lab=vz}
-N -610 -80 -600 -80 {lab=vx}
 N -280 0 200 -0 {lab=mult_out_1}
-N -640 -80 -610 -80 {lab=vx}
-N -640 80 -610 80 {lab=vz}
 N 430 -700 450 -700 {lab=vx_vgnd}
 N 430 -700 430 -580 {lab=vx_vgnd}
 N 510 -700 530 -700 {lab=#net1}
@@ -122,8 +98,49 @@ N 1010 -90 1060 -90 {lab=vy_n}
 N 580 -700 580 -670 {lab=#net1}
 N 530 -700 580 -700 {lab=#net1}
 N 580 -610 580 -580 {lab=vx}
-C {behavioral/ota.sym} 480 -440 0 0 {name=X_VX Ao=10000 VDD=\{VDD\} VSAT=0.25 GBW=1000e6 Rout_ol=100}
-C {behavioral/multiplier.sym} -40 320 0 0 {name=X_MULT2 VDD=\{VDD\} VSAT=0.25 BW=1000e6 GAIN=\{Av\}}
+N 180 680 580 680 {lab=vz}
+N -180 80 -180 160 {lab=vy_n}
+N -630 0 -280 0 {lab=mult_out_1}
+N -180 380 180 380 {lab=mult_out_2}
+N 480 -120 480 -100 {lab=vdd}
+N 480 -500 480 -480 {lab=vdd}
+N 460 340 460 360 {lab=vdd}
+N -1010 -80 -960 -80 {lab=vx}
+N -850 -160 -850 -140 {lab=vdd}
+N -850 150 -850 170 {lab=vss}
+N -850 140 -850 150 {lab=vss}
+N -990 -40 -950 -40 {lab=vref}
+N -1040 -40 -1040 40 {lab=vref}
+N -990 40 -950 40 {lab=vref}
+N -960 -80 -950 -80 {lab=vx}
+N -560 300 -510 300 {lab=vy_n}
+N -560 460 -510 460 {lab=vref}
+N -400 220 -400 240 {lab=vdd}
+N -400 530 -400 550 {lab=vss}
+N -400 520 -400 530 {lab=vss}
+N -540 340 -500 340 {lab=vref}
+N -540 420 -500 420 {lab=vx}
+N -510 460 -500 460 {lab=vref}
+N -510 300 -500 300 {lab=vy_n}
+N -590 340 -540 340 {lab=vref}
+N -590 340 -590 460 {lab=vref}
+N -590 460 -560 460 {lab=vref}
+N -1010 -260 200 -260 {lab=vx}
+N -1140 -260 -1140 -80 {lab=vx}
+N -560 160 -180 160 {lab=vy_n}
+N -560 160 -560 300 {lab=vy_n}
+N -1140 -260 -1010 -260 {lab=vx}
+N -1140 -80 -1010 -80 {lab=vx}
+N -1140 -80 -1140 420 {lab=vx}
+N -1140 420 -540 420 {lab=vx}
+N -590 460 -590 500 {lab=vref}
+N -1040 40 -1040 80 {lab=vref}
+N -980 680 180 680 {lab=vz}
+N -980 80 -980 680 {lab=vz}
+N -980 80 -950 80 {lab=vz}
+N -1040 -40 -990 -40 {lab=vref}
+N -1040 40 -990 40 {lab=vref}
+C {behavioral/ota.sym} 480 -440 0 0 {name=X_VX Ao=\{Ao\} VDD=\{VDD\} VSAT=0.25 GBW=\{GBW\} Rout_ol=100}
 C {devices/lab_wire.sym} 400 -420 0 0 {name=p1 sig_type=std_logic lab=vref}
 C {devices/res.sym} 310 -460 3 0 {name=R1
 value=100e3
@@ -142,7 +159,7 @@ footprint=1206
 device=resistor
 m=1}
 C {devices/lab_wire.sym} 480 -380 3 0 {name=p3 sig_type=std_logic lab=vss}
-C {behavioral/ota.sym} 480 -60 0 0 {name=X_VYN Ao=10000 VDD=\{VDD\} VSAT=0.25 GBW=1000e6 Rout_ol=100}
+C {behavioral/ota.sym} 480 -60 0 0 {name=X_VYN Ao=\{Ao\} VDD=\{VDD\} VSAT=0.25 GBW=\{GBW\} Rout_ol=100}
 C {devices/lab_wire.sym} 400 -40 0 0 {name=p4 sig_type=std_logic lab=vref}
 C {devices/res.sym} 310 -80 3 0 {name=R3
 value=35.7k
@@ -166,7 +183,7 @@ value=1e6
 footprint=1206
 device=resistor
 m=1}
-C {behavioral/ota.sym} 460 400 0 0 {name=X_VZ Ao=10000 VDD=\{VDD\} VSAT=0.25 GBW=1000e6 Rout_ol=100}
+C {behavioral/ota.sym} 460 400 0 0 {name=X_VZ Ao=\{Ao\} VDD=\{VDD\} VSAT=0.25 GBW=\{GBW\} Rout_ol=100}
 C {devices/lab_wire.sym} 380 420 0 0 {name=p7 sig_type=std_logic lab=vref}
 C {devices/res.sym} 290 380 3 0 {name=R6
 value=625
@@ -185,12 +202,7 @@ footprint=1206
 device=resistor
 m=1}
 C {devices/lab_wire.sym} 460 460 3 0 {name=p9 sig_type=std_logic lab=vss}
-C {devices/lab_wire.sym} -40 540 3 0 {name=p10 sig_type=std_logic lab=vss}
-C {behavioral/multiplier.sym} -500 -60 0 0 {name=X_MULT1 VDD=\{VDD\} VSAT=0.25 BW=1000e6 GAIN=\{Av\}}
-C {devices/lab_wire.sym} -500 160 3 0 {name=p11 sig_type=std_logic lab=vss}
-C {devices/lab_wire.sym} -180 480 3 0 {name=p12 sig_type=std_logic lab=vref}
-C {devices/lab_wire.sym} -680 60 3 0 {name=p13 sig_type=std_logic lab=vref}
-C {devices/vsource.sym} -1610 0 0 0 {name=V1 value=0 savecurrent=false}
+C {devices/vsource.sym} -1610 0 0 0 {name=V1 value=\{vdd/2\} savecurrent=false}
 C {devices/lab_wire.sym} -1610 50 3 0 {name=p14 sig_type=std_logic lab=vss}
 C {devices/lab_wire.sym} -1610 -70 3 1 {name=p15 sig_type=std_logic lab=vref}
 C {devices/vsource.sym} -1500 0 0 0 {name=V2 value=0 savecurrent=false}
@@ -199,29 +211,31 @@ C {devices/gnd.sym} -1450 -40 0 0 {name=l1 lab=GND}
 C {devices/vsource.sym} -1720 0 0 0 {name=V3 value=\{VDD\} savecurrent=false}
 C {devices/lab_wire.sym} -1720 50 3 0 {name=p17 sig_type=std_logic lab=vss}
 C {devices/lab_wire.sym} -1720 -70 3 1 {name=p18 sig_type=std_logic lab=vdd}
-C {devices/code.sym} -1617.5 -585 0 0 {name=SIMULATOR only_toplevel=false value=
+C {devices/code.sym} -1607.5 -595 0 0 {name=SIMULATOR only_toplevel=false value=
 "
 .option savecurrents
 
 .control
   
   .param scale = 1
-  .param Av = 100
+  .param Am = 100
   .param cap = 200e-12
-  .param vdd = 100
-  .param Treset = 10e-3
+  .param vdd = 1.8
+  .param Treset = 1e-3
   .param trf = 10p
+  .param GBW = 100e6
+  .param Ao = 100000
 
 
   save all
   save I0#branch
 
-  .options method=gear
-  *tran 0.1m 50m 49m
-   tran 0.1e-3 20e-3
+  .options method=gar
+  *tran 0.0001m 50m 49m
+   tran 0.01e-3 20m
  
   plot v(vx) v(vy_n) v(vz)
-  plot v(vz)-\{VDD/2\} vs v(vx)-\{VDD/2\} retraceplot
+  plot v(vz) vs v(vx) retraceplot
 
   write lorenz_behavioral.raw
   *quit 0
@@ -254,4 +268,16 @@ C {devices/switch_ngspice.sym} 900 -210 1 0 {name=S2 model=SW1
 device_model=".MODEL SW1 SW( VT=\{VDD/2\} VH=0.01 RON=0.01 ROFF=1e99 )"}
 C {devices/switch_ngspice.sym} 930 330 1 0 {name=S3 model=SW1
 device_model=".MODEL SW1 SW( VT=\{VDD/2\} VH=0.01 RON=0.01 ROFF=1e99 )"}
-C {devices/vsource.sym} 580 -640 0 0 {name=V5 value=1 savecurrent=false}
+C {devices/vsource.sym} 580 -640 0 0 {name=V5 value=-1 savecurrent=false}
+C {devices/lab_wire.sym} 480 -120 3 1 {name=p12 sig_type=std_logic lab=vdd}
+C {devices/lab_wire.sym} 480 -500 3 1 {name=p13 sig_type=std_logic lab=vdd}
+C {devices/lab_wire.sym} 460 340 3 1 {name=p36 sig_type=std_logic lab=vdd}
+C {behavioral/multiplier.sym} -850 -60 0 0 {name=X1 VDD=1.8 VSAT=0.25 BW=10e6 GAIN=100}
+C {devices/lab_wire.sym} -850 -160 3 1 {name=p39 sig_type=std_logic lab=vdd}
+C {devices/lab_wire.sym} -850 170 3 0 {name=p40 sig_type=std_logic lab=vss}
+C {behavioral/multiplier.sym} -400 320 0 0 {name=X2 VDD=1.8 VSAT=0.25 BW=10e6 GAIN=100}
+C {devices/lab_wire.sym} -540 420 0 0 {name=p43 sig_type=std_logic lab=vx}
+C {devices/lab_wire.sym} -400 220 3 1 {name=p44 sig_type=std_logic lab=vdd}
+C {devices/lab_wire.sym} -400 550 3 0 {name=p45 sig_type=std_logic lab=vss}
+C {devices/lab_wire.sym} -590 500 3 0 {name=p46 sig_type=std_logic lab=vref}
+C {devices/lab_wire.sym} -1040 80 3 0 {name=p10 sig_type=std_logic lab=vref}

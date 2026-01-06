@@ -31,6 +31,8 @@ N -100 -140 100 -140 {lab=vout}
 N -100 -140 -100 -20 {lab=vout}
 N -100 -20 -60 -20 {lab=vout}
 N -130 230 -60 230 {lab=#net1}
+N 0 -60 0 -40 {lab=VDD}
+N 0 190 0 210 {lab=VDD}
 C {devices/vsource.sym} -500 70 0 0 {name=V_VDD value=1.8 savecurrent=true}
 C {devices/gnd.sym} -500 120 0 0 {name=l2 lab=GND}
 C {devices/vdd.sym} -500 20 0 0 {name=l3 lab=VDD}
@@ -62,3 +64,5 @@ C {devices/lab_wire.sym} 70 250 0 1 {name=p5 sig_type=std_logic lab=vout_ol}
 C {behavioral/ota.sym} 0 250 0 0 {name=X2 Ao=1000 GBW=100e6 VDD=1.8 VSAT=0.25 Rout_ol=100}
 C {devices/vsource.sym} -170 410 0 0 {name=V_IN1 value=0.9 savecurrent=true}
 C {devices/gnd.sym} -170 460 0 0 {name=l8 lab=GND}
+C {devices/vdd.sym} 0 -60 0 0 {name=l9 lab=VDD}
+C {devices/vdd.sym} 0 190 0 0 {name=l10 lab=VDD}

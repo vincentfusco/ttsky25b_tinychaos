@@ -51,6 +51,9 @@ N -100 -120 -100 -20 {lab=vout}
 N -100 -20 -60 -20 {lab=vout}
 N -280 210 -280 250 {lab=#net1}
 N -280 210 -50 210 {lab=#net1}
+N 0 -310 0 -290 {lab=VDD}
+N 10 170 10 190 {lab=VDD}
+N 0 -60 0 -40 {lab=VDD}
 C {devices/vsource.sym} -500 70 0 0 {name=V_VDD value=1.8 savecurrent=true}
 C {devices/gnd.sym} -500 120 0 0 {name=l2 lab=GND}
 C {devices/vdd.sym} -500 20 0 0 {name=l3 lab=VDD}
@@ -92,3 +95,6 @@ C {devices/gnd.sym} -280 480 0 0 {name=l4 lab=GND}
 C {devices/lab_wire.sym} -350 370 0 0 {name=p2 sig_type=std_logic lab=vout_bias}
 C {devices/lab_wire.sym} -120 20 0 1 {name=p3 sig_type=std_logic lab=vinp_cl}
 C {devices/lab_wire.sym} -120 250 0 1 {name=p10 sig_type=std_logic lab=vinp_ol}
+C {devices/vdd.sym} 0 -310 0 0 {name=l8 lab=VDD}
+C {devices/vdd.sym} 10 170 0 0 {name=l9 lab=VDD}
+C {devices/vdd.sym} 0 -60 0 0 {name=l13 lab=VDD}
